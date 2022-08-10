@@ -1,0 +1,126 @@
+:root {
+  --fuente: "Oswald", sans-serif;
+
+  --gris: #ccc;
+
+  --azul1: #002b5b;
+  --azul2: #2b4865;
+  --turquesa: #256d85;
+  --morado: #752cb4;
+  --rojo: #d82c1d;
+  --azul: #2577ec;
+  --verde: #1ae41a;
+
+  --blanco: #fff;
+  --negro: rgb(12, 12, 12);
+  --negro2: rgb(49, 49, 49);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente);
+  text-align: center;
+  background-image: url("http://3.bp.blogspot.com/-a9a9bZR5tq4/VivbqofnTTI/AAAAAAAAOI0/Q-VnRytpAQg/s1600/Screen%2BShot%2B2015-10-24%2Bat%2B3.26.30%2BPM.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+td {
+  padding: 0.5rem;
+}
+
+table {
+  border-collapse: collapse;
+  color: var(--blanco);
+  text-transform: capitalize;
+  width: 100%;
+}
+
+tr:nth-child(odd) {
+  background-color: var(--azul2);
+}
+
+tr:nth-child(even) {
+  background-color: var(--turquesa);
+}
+
+h2 {
+  letter-spacing: 0.1ch;
+  color: var(--blanco);
+  font-size: 26px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+}
+
+@media (min-width: 600px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 800px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+article {
+  margin: 0 auto;
+  background-color: var(--negro);
+  border-radius: 0.5rem;
+}
+
+article:nth-child(odd) {
+  box-shadow: 0px 0px 28px 0px var(--azul);
+}
+
+article:nth-child(even) {
+  box-shadow: 0px 0px 28px 0px var(--verde);
+}
+
+footer {
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+#page {
+  color: var(--blanco);
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: var(--negro);
+  box-shadow: 0px 0px 28px 0px var(--morado);
+}
+
+button {
+  font-family: var(--fuente);
+  padding: 1rem;
+  background-color: var(--negro);
+  color: var(--blanco);
+  box-shadow: 0px 0px 28px 0px var(--rojo);
+}
+
+button:disabled {
+  background-color: var(--negro2);
+  color: var(--blanco);
+  box-shadow: none;
+}
